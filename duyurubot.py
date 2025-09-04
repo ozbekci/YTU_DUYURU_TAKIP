@@ -50,7 +50,7 @@ def main():
 
     if new:
         for ann in new:
-            send_telegram(f"Yeni Duyuru: {ann['title']}\nLink: {ann['link']}")
+            send_telegram(f"Yeni Duyuru: {ann['title']}\nLink: {ann['link']}\n Tarih: {ann['date']}")
         save_seen(current)
 
 if __name__ == "__main__":
