@@ -5,7 +5,7 @@ import time
 import os
 
 # Ortam değişkenlerinden Telegram ayarlarını al
-TELEGRAM_TOKEN = os.environ.get("BOT_TOKEN")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 
 def send_telegram(message):
