@@ -3,10 +3,12 @@ from bs4 import BeautifulSoup
 import json
 import time
 import os
+from dotenv import load_dotenv
 
-# Telegram ayarları
-TELEGRAM_TOKEN = "8026413553:AAHhV29vQ6wJj1-EiVE8qiNY-VhTPhkxkfA"
-CHAT_ID = "5504174778"
+# Ortam değişkenlerinden Telegram ayarlarını al
+load_dotenv()
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 def send_telegram(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
